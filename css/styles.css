@@ -734,14 +734,100 @@ img{
 
 .examples-list .item {
     background: #FFFFFF;
+    width: 370px;
 
     transition: box-shadow var(--anim-fast) var(--timing-function);
 }
+
+
 
 .examples-list>.item:hover,
 .examples-list>.item:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+
+
+.example-overlay{
+    position: relative;
+    overflow: hidden;
+}
+
+.example-overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(33, 150, 243, 0.9);
+
+    opacity: 0;
+
+    transform: translateY(100%);
+    transition: transform var(--anim-fast) var(--timing-function);
+}
+
+.example-link:hover ::before {
+    opacity: 1;
+    transform: translateY(0)
+}
+
+.example-overlay .text-overlay{
+    position: absolute;
+    transform: translateY(100%);
+    transition: transform var(--anim-fast) var(--timing-function);
+    bottom: 0;
+    width: 100%;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+
+    opacity: 0;
+    padding: 64px 24px;
+}
+
+.example-link:hover .text-overlay{
+    opacity: 1;
+    transform: translateY(0)
+}
+
+
+
+
+/* .example-overlay{
+    position: relative;
+}
+
+.example-overlay .text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    opacity: 0;
+
+    width: 322px;
+}
+
+.examples-list .item:hover .example-overlay .text {
+    opacity: 1;
+}
+
+.examples-list .item:hover .example-overlay{
+    background-color: rgba(33, 150, 243, 0.9);
+} */
+
+
+
+
+
+
 
 .examples-list .exampl-title{
     font-size: 18px;
