@@ -646,13 +646,65 @@ img{
     --icon-logo-color: currentColor;
 }
 
-/* .cstmrs-logo .item:hover{
-    color: var(--special-txt-cl);
-    border-color: var(--special-txt-cl);
-} */
+
+/* BACKDROP */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 1 ;
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
 
 
+.backdrop-modal{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
 
+    width: 528px;
+    min-height: 581px;
+
+    background-color: #FFFFFF;
+
+    transition: transform var(--anim-fast) var(--timing-function);
+}
+
+.backdrop.is-hidden .backdrop-modal{
+    transform: translate(-50%, -50%) scale(0.3);
+}
+
+
+.backdrop-modal .button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+
+    cursor: pointer;
+}
 
 
 
@@ -798,8 +850,6 @@ img{
 }
 
 
-
-
 /* .example-overlay{
     position: relative;
 }
@@ -822,11 +872,6 @@ img{
 .examples-list .item:hover .example-overlay{
     background-color: rgba(33, 150, 243, 0.9);
 } */
-
-
-
-
-
 
 
 .examples-list .exampl-title{
