@@ -647,7 +647,7 @@ img{
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
 
-    transition: opacity var(--timing-function), 
+    transition: opacity var(--anim-fast) var(--timing-function), 
         visibility var(--anim-fast) var(--timing-function);
     }
 
@@ -674,7 +674,6 @@ img{
 
 .backdrop.is-hidden .backdrop-modal{
     transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
-    opacity: 0;
 }
 
 
@@ -806,14 +805,14 @@ img{
 
     background-color: rgba(33, 150, 243, 0.9);
 
-    opacity: 0;
+    /* opacity: 0; */
 
     transform: translateY(100%);
     transition: transform var(--anim-fast) var(--timing-function);
 }
 
 .example-link:hover ::before {
-    opacity: 1;
+    /* opacity: 1; */
     transform: translateY(0);
 }
 
@@ -833,12 +832,12 @@ img{
     letter-spacing: 0.03em;
     color: #FFFFFF;
 
-    opacity: 0;
+    /* opacity: 0; */
     padding: 64px 24px;
 }
 
 .example-link:hover .text-overlay{
-    opacity: 1;
+    /* opacity: 1; */
     transform: translateY(0);
 
 }
