@@ -373,14 +373,15 @@ img{
     margin: 0 auto;
     min-width: 200px;
     min-height: 50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    display: flex;
-    align-items: center;
-    text-align: center;
+
     letter-spacing: 0.06em;
     color: #FFFFFF;
     background: #2196F3;
@@ -413,18 +414,6 @@ img{
     width: 270px;
     height: 120px;
 }
-
-/* .advnt-svg-box{
-    display: flex;
-    gap: 30px;
-} */
-
-/* .advnt-svg-box .item{
-    padding: 25px 100px ;
-    background-color: var(--grey-bg-color);
-    margin-bottom: 30px;
-    border-radius: 4px;
-} */
 
 .advnt-list .advnt-list-title {
     font-size: 14px;
@@ -656,8 +645,11 @@ img{
     height: 100%;
 
     background-color: rgba(0, 0, 0, 0.2);
-    opacity: 1 ;
-}
+    opacity: 1;
+
+    transition: opacity var(--timing-function), 
+        visibility var(--anim-fast) var(--timing-function);
+    }
 
 .backdrop.is-hidden{
     opacity: 0;
@@ -671,9 +663,9 @@ img{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1) rotate(0);
-
     width: 528px;
     min-height: 581px;
+    opacity: 1;
 
     background-color: #FFFFFF;
 
@@ -681,7 +673,8 @@ img{
 }
 
 .backdrop.is-hidden .backdrop-modal{
-    transform: translate(-50%, -50%) scale(0.3);
+    transform: translate(-50%, -50%) scale(0.3) rotate(1turn);
+    opacity: 0;
 }
 
 
@@ -821,7 +814,7 @@ img{
 
 .example-link:hover ::before {
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
 }
 
 .example-overlay .text-overlay{
@@ -846,7 +839,8 @@ img{
 
 .example-link:hover .text-overlay{
     opacity: 1;
-    transform: translateY(0)
+    transform: translateY(0);
+
 }
 
 
@@ -891,7 +885,7 @@ img{
     padding-bottom: 20px;
     padding-left: 24px;
 
-    border: 1px solid #EEEEEE; ;
+    border: 1px solid #EEEEEE; 
 }
 
 .exampl-title{
